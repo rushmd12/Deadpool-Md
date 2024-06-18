@@ -1,0 +1,143 @@
+{
+  "name":"RUSI-MD BY rush",
+  "description":"Lazmiii•) මේ දලා තියන කිසි දෙයක් වෙනස් කරන්න එපා එහෙම වුනොත් වැඩ නැති වෙන්න පුලුවන්🇱🇰",
+  "keywords":["bot","node","baileys","whatsapp"],
+  "logo":"https://telegra.ph/file/c3db5848cd8d25bcffdb1.jpg",
+  "repository":"https://github.com/cutibabah/rusi-md",
+  "succes_url":"/",
+  "stack":"container",
+     "env":{
+    "PREFIX":
+    {
+      "description":"bot සාමනයෙන් තිතක් ද කමාවකින්ද වැඩ කරන්නේ දන්න . , ! ? Sirf ek symbol likho",
+      "value":".",
+      "required":true
+    },
+    "AUTO_READ_MESSAGES":
+    {
+      "description":"massege auto read කරන්න ඔනේනම් yes දන්න එහෙම නෙවේ නම් no දන්න |yes| Likho agar nahi chahte to |no| Likho", 
+      "value":"no", 
+      "required":true 
+    }, 
+    "AUTO_READ_STATUS":
+    {
+      "description":"yes කියලා තිබ්බොත් මේක status auto read කරනවා නැත්තම් no දැම්මොත් නෑ |yes| Agar chahte ho ke Auto Seen Naa kre to |no| Likho",
+      "value":"yes",
+      "required":true
+    }, "AUTO_DOWNLOAD_STATUS":
+    {
+      "description":"මේ settings එක status auto download වෙන්න ඕනද නැද්ද කියලා |yes| Agar Chahte ho Ke Send Naa kare to Likho |no|",
+      "value":"no",
+      "required":true
+    }
+    ,
+     "PM_PERMIT" :
+     {
+      "description":" වෙනස් කරන්න එපා |no| don'change ⭐|no|",
+      "value":"no",
+      "required":true
+    }
+    ,
+    "BOT_NAME" : {
+
+      "description":"වෙනස් කරන්න එපා🇱🇰 don't change",
+      "value":"RUSI-MD",
+      "required":true
+
+    } ,
+     "BOT_MENU_LINKS" : {
+
+      "description":"Bot  menu  pic  Link ",
+      "value":"https://telegra.ph/file/c3db5848cd8d25bcffdb1.jpg",
+      "required":false
+
+     },
+    "PUBLIC_MODE":
+    {
+      "description":"🇱🇰🇱🇰🇱🇰 |yes| දැම්මොත් අනික් අයටත් වැඩ |no| දැම්මොත් ඔයාට විතරයි",
+      "value":"yes",
+      "required":true
+    }
+        ,
+    "HEROKU_API_KEY": {
+    "description": "Apke heroku ke accounts ki API KEY Likho",
+     "required":true
+    },
+   "HEROKU_APP_NAME": {
+    "description": "app name එක දෙන්න ",
+     "required" :true
+    }  
+          ,
+    "SESSION_ID":
+    {
+      "description":"put your sessoin id rusi md",   
+      "value":"",
+      "required": true
+
+    },
+    "OWNER_NAME":
+    {
+
+    "desc": "Ap apna name ",
+    "required": true,
+    "value": "rush"
+  },
+    "OWNER_NUMBER":
+  {
+
+    "desc": "Ap apna number likho |+| (don't change)🇱🇰 lagana ese likho 923xxxxx",
+    "required":true,
+    "value": "94762498519"
+  },
+    "WARN_COUNT":
+  {
+    "desc": "කිසිදු වෙනසක් නොකරන්න don't change",
+    "required": true,
+    "value": "2"
+  },
+    "CHAT_BOT":
+    {
+      "desc": "chat bot ඔනේනම් yes නැත්තම් no දන්න",
+      "required": true, 
+       "value": "no" 
+    }, 
+  "STARTING_BOT_MESSAGE":
+  {
+    "description": "don't change",
+    "required": true,
+    "value": "no"
+  },
+  "PRESENCE":{
+    "description":"Yaha per |online| Likho always Online Show hone ke lie or |typing| likho ge to koi msg kre ga apko oper show hoga is typing...  or chahte ho ke is recordin...  show ho to uske lie |recording| Likho or agar chahte hai esa kuch bhi na ho to box khali chor do",
+    "value":"",
+    "required": false
+  }  
+  },
+
+
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ],
+
+  "formation": {
+                "worker": {
+                        "quantity": 1,
+                        "size": "basic"
+                }
+        },
+
+  "addons":[
+    {
+      "plan":"heroku-postgresql"
+    }
+  ]
+}
